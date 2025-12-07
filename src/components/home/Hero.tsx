@@ -61,7 +61,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/30 to-accent-500/30 rounded-full blur-3xl" />
               {/* Shot/syringe behind the vial */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <Image src="/shot1.png" alt="Research Syringe" width={400} height={400} className="w-[80%] h-auto drop-shadow-xl transition-transform duration-500 rotate-[160deg] group-hover:rotate-[175deg]" />
+                <Image src="/shot1.png" alt="Research Syringe" width={400} height={400} className="w-[40%] h-auto drop-shadow-xl transition-transform duration-500 rotate-[250deg] group-hover:rotate-[265deg]" />
               </div>
               {/* Vial in front */}
               <div className="relative transform rotate-3 group-hover:rotate-0 transition-transform duration-500">
