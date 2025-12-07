@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, Shield, Truck, Award } from 'lucide-react';
 
 export default function Hero() {
@@ -57,15 +56,20 @@ export default function Hero() {
 
           {/* Hero image/illustration */}
           <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative">
-            <div className="relative w-full aspect-square max-w-lg mx-auto group">
+            <div className="relative w-full aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/30 to-accent-500/30 rounded-full blur-3xl" />
-              {/* Shot/syringe behind the vial */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Image src="/shot1.png" alt="Research Syringe" width={400} height={400} className="w-[40%] h-auto drop-shadow-xl transition-transform duration-500 rotate-[250deg] group-hover:rotate-[265deg]" />
-              </div>
-              {/* Vial in front */}
-              <div className="relative transform rotate-3 group-hover:rotate-0 transition-transform duration-500">
-                <Image src="/vial.png" alt="Research Grade Peptide Vial" width={500} height={500} className="w-full h-auto drop-shadow-2xl" priority />
+              <div className="relative glass rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">🧬</div>
+                    <h3 className="text-2xl font-bold mb-2">Research Grade</h3>
+                    <p className="text-gray-300">Premium quality peptides for advanced research applications</p>
+                    <div className="mt-6 flex justify-center gap-2">
+                      <span className="px-3 py-1 bg-primary-500/20 rounded-full text-sm">99%+ Purity</span>
+                      <span className="px-3 py-1 bg-accent-500/20 rounded-full text-sm">USA Made</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
