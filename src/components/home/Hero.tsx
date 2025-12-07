@@ -57,9 +57,14 @@ export default function Hero() {
 
           {/* Hero image/illustration */}
           <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative">
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
+            <div className="relative w-full aspect-square max-w-lg mx-auto group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/30 to-accent-500/30 rounded-full blur-3xl" />
-              <div className="relative transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              {/* Shot/syringe behind the vial */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Image src="/shot1.png" alt="Research Syringe" width={400} height={400} className="w-[80%] h-auto drop-shadow-xl transition-transform duration-500 rotate-[160deg] group-hover:rotate-[175deg]" />
+              </div>
+              {/* Vial in front */}
+              <div className="relative transform rotate-3 group-hover:rotate-0 transition-transform duration-500">
                 <Image src="/vial.png" alt="Research Grade Peptide Vial" width={500} height={500} className="w-full h-auto drop-shadow-2xl" priority />
               </div>
             </div>
