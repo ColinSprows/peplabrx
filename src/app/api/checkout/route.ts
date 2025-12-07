@@ -1,29 +1,20 @@
-import { NextResponse } from 'next/server'
-import { stripe } from '@/lib/stripe'
-import connectDB from '@/lib/mongodb'
-import Order from '@/models/Order'
+import { NextResponse } from 'next/server';
+import { stripe } from '@/lib/stripe';
 
 export async function POST(request: Request) {
   try {
-    const { items, email, shippingAddress } = await request.json()
+    const { items } = await request.json();
 
     if (!items || items.length === 0) {
-      return NextResponse.json(
-        { error: 'No items in cart' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'No items in cart' }, { status: 400 });
     }
 
-    await connectDB()
+    // Get the base URL - use VERCEL_URL in production or fall back to domain
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://peplabrx.com');
 
     // Calculate totals
-    const subtotal = items.reduce(
-      (sum: number, item: any) => sum + item.price * item.quantity,
-      0
-    )
-    const shipping = subtotal >= 150 ? 0 : 9.99
-    const tax = subtotal * 0.0 // No tax for research chemicals
-    const total = subtotal + shipping + tax
+    const subtotal = items.reduce((sum: number, item: any) => sum + item.price * item.quantity, 0);
+    const shipping = subtotal >= 150 ? 0 : 9.99;
 
     // Create Stripe checkout session
     const session = await stripe.checkout.sessions.create({
@@ -33,19 +24,14 @@ export async function POST(request: Request) {
           currency: 'usd',
           product_data: {
             name: item.name,
-            images: [item.image],
           },
           unit_amount: Math.round(item.price * 100),
         },
         quantity: item.quantity,
       })),
       mode: 'payment',
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/cart`,
-      customer_email: email,
-      metadata: {
-        orderId: 'pending',
-      },
+      success_url: `${baseUrl}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/cart`,
       shipping_options: [
         {
           shipping_rate_data: {
@@ -62,47 +48,11 @@ export async function POST(request: Request) {
           },
         },
       ],
-    })
+    });
 
-    // Create order in database
-    const order = await Order.create({
-      email: email || 'guest@peplabrx.com',
-      items: items.map((item: any) => ({
-        name: item.name,
-        price: item.price,
-        quantity: item.quantity,
-        image: item.image,
-      })),
-      subtotal,
-      shipping,
-      tax,
-      total,
-      status: 'pending',
-      paymentStatus: 'pending',
-      stripeSessionId: session.id,
-      shippingAddress: shippingAddress || {
-        firstName: 'Guest',
-        lastName: 'Customer',
-        address: '',
-        city: '',
-        state: '',
-        zipCode: '',
-        country: 'US',
-      },
-    })
-
-    // Update session metadata with order ID
-    await stripe.checkout.sessions.update(session.id, {
-      metadata: { orderId: order._id.toString() },
-    })
-
-    return NextResponse.json({ url: session.url, sessionId: session.id })
+    return NextResponse.json({ url: session.url, sessionId: session.id });
   } catch (error) {
-    console.error('Checkout error:', error)
-    return NextResponse.json(
-      { error: 'Failed to create checkout session' },
-      { status: 500 }
-    )
+    console.error('Checkout error:', error);
+    return NextResponse.json({ error: 'Failed to create checkout session' }, { status: 500 });
   }
 }
-
