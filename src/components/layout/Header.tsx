@@ -28,23 +28,10 @@ const navigation = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [bannerVisible, setBannerVisible] = useState(true);
   const { state } = useCart();
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Top banner */}
-      <AnimatePresence mode="wait">
-        {bannerVisible && (
-          <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3, ease: 'easeOut' }} className="bg-gradient-to-r from-primary-600 to-accent-600 text-white py-2 px-4 text-center text-sm relative">
-            <p>🧪 FREE Priority Shipping on orders over $150 | Lab-Tested &amp; USA Made</p>
-            <button onClick={() => setBannerVisible(false)} className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-white/20 rounded transition-colors" aria-label="Close banner">
-              <X className="h-4 w-4" />
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
