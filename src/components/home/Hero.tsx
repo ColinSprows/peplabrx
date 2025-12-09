@@ -62,9 +62,9 @@ export default function Hero() {
               <div className="relative glass rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
                   <div className="text-center">
-                    <div className="relative w-24 h-24 mx-auto mb-4">
-                      <Image src="/shot1.png" alt="Syringe" width={96} height={96} className="absolute inset-0 w-full h-full object-contain rotate-[160deg] opacity-60" />
-                      <Image src="/vial.png" alt="Peptide Vial" width={96} height={96} className="relative w-full h-full object-contain drop-shadow-lg" />
+                    <div className="relative w-48 h-48 mx-auto mb-4">
+                      <Image src="/shot1.png" alt="Syringe" width={120} height={120} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-auto object-contain rotate-[80deg] opacity-60" />
+                      <Image src="/vial.png" alt="Peptide Vial" width={192} height={192} className="relative w-full h-full object-contain drop-shadow-lg" />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Research Grade</h3>
                     <p className="text-gray-300">Premium quality peptides for advanced research applications</p>
