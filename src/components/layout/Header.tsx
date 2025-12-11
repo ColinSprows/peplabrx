@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShoppingCart, Menu, X, Beaker, ChevronDown } from 'lucide-react';
+import { ShoppingCart, Menu, X, ChevronDown } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 
 const navigation = [
@@ -35,9 +36,8 @@ export default function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <Beaker className="h-8 w-8 text-primary-600" />
-            <span className="text-2xl font-bold gradient-text">PepLabRx</span>
+          <Link href="/" className="flex items-center">
+            <Image src="/logo.png" alt="PepLabRx" width={180} height={48} className="h-12 w-auto" priority />
           </Link>
 
           {/* Desktop Navigation */}
