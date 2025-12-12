@@ -26,7 +26,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-[#e5e5e5]">
+    <footer className="bg-secondary-100 border-t border-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Company */}
@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-600 transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -49,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-600 transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-600 transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -80,10 +80,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-[#e5e5e5] mt-10 pt-6">
+        <div className="border-t border-black mt-10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-400">©{new Date().getFullYear()} PepLabRx. All rights reserved.</p>
-            <p className="text-xs text-gray-400 max-w-xl text-center md:text-right">Products are sold for research purposes only. Not for human consumption. Must be 18+ to purchase.</p>
+            <p className="text-xs text-gray-500">©{new Date().getFullYear()} PepLabRx. All rights reserved.</p>
+            <p className="text-xs text-gray-500 max-w-xl text-center md:text-right">Products are sold for research purposes only. Not for human consumption. Must be 18+ to purchase.</p>
           </div>
         </div>
       </div>

@@ -23,12 +23,12 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20 bg-white border-b border-[#e5e5e5]">
+    <section className="py-20 bg-secondary-100 border-b border-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left side - sticky header */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:sticky lg:top-24">
-            <span className="text-sm text-gray-500 mb-4 block">How it Works</span>
+            <span className="text-sm text-primary-600 mb-4 block font-medium">How it Works</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your path to quality research compounds is simple</h2>
             <p className="text-gray-600">Four easy steps to get premium peptides delivered to your lab</p>
           </motion.div>
@@ -36,8 +36,8 @@ export default function HowItWorks() {
           {/* Right side - steps */}
           <div className="space-y-6">
             {steps.map((step, index) => (
-              <motion.div key={step.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className="flex gap-6 p-6 bg-[#fafafa] border border-[#e5e5e5] rounded-2xl">
-                <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-medium">{index + 1}</div>
+              <motion.div key={step.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className="flex gap-6 p-6 bg-white border border-black rounded-2xl">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-medium">{index + 1}</div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{step.description}</p>

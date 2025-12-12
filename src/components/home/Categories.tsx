@@ -33,7 +33,7 @@ const features = [
 
 export default function Categories() {
   return (
-    <section className="py-20 bg-white border-b border-[#e5e5e5]">
+    <section className="py-20 bg-white border-b border-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Research peptides, the way you always hoped they could be</h2>
@@ -43,10 +43,10 @@ export default function Categories() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, index) => (
             <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }}>
-              <div className="h-full bg-[#fafafa] rounded-2xl p-8 border border-[#e5e5e5] hover:border-gray-300 transition-colors">
+              <div className="h-full bg-secondary-50 rounded-2xl p-8 border border-black hover:bg-secondary-100 transition-colors">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
-                <Link href={feature.link} className="inline-flex items-center text-gray-900 text-sm font-medium hover:text-gray-600 transition-colors">
+                <Link href={feature.link} className="inline-flex items-center text-primary-600 text-sm font-medium hover:text-primary-700 transition-colors">
                   {feature.linkText}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
