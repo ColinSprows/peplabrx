@@ -6,15 +6,15 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Newsletter() {
   return (
-    <section className="py-24 bg-gray-900 text-white">
+    <section className="py-20 bg-gray-900 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Your path to quality research compounds begins now</h2>
-          <p className="text-lg text-gray-400 mb-10">Get started with premium peptides from researchers who understand your needs</p>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Your path to quality research compounds begins now</h2>
+          <p className="text-gray-400 mb-8">Get started with premium peptides from researchers who understand your needs</p>
 
-          <Link href="/products" className="inline-flex items-center px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white rounded-full font-medium transition-all shadow-lg hover:shadow-xl text-lg">
+          <Link href="/products" className="inline-flex items-center px-6 py-3 bg-white hover:bg-gray-100 text-gray-900 rounded-full text-sm font-medium transition-colors">
             Shop Now
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </motion.div>
       </div>

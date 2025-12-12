@@ -6,8 +6,7 @@
 
 :root {
   --foreground-rgb: 23, 23, 23;
-  --background-rgb: 253, 251, 247;
-  --primary-rgb: 5, 200, 176;
+  --background-rgb: 255, 255, 255;
 }
 
 body {
@@ -22,58 +21,25 @@ body {
   }
 }
 
-/* Custom scrollbar - teal theme */
+/* Minimal scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #faf6ed;
+  background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #05c8b0;
-  border-radius: 4px;
+  background: #d1d5db;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00a190;
+  background: #9ca3af;
 }
 
-/* Gradient text - teal theme */
-.gradient-text {
-  background: linear-gradient(135deg, #05c8b0 0%, #00a190 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Glass effect */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Meto-style section backgrounds */
-.bg-cream {
-  background-color: #fdfbf7;
-}
-
-.bg-cream-light {
-  background-color: #faf6ed;
-}
-
-/* Smooth button hover */
-.btn-primary {
-  @apply bg-primary-500 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-primary-600 hover:shadow-lg;
-}
-
-.btn-secondary {
-  @apply bg-white text-gray-900 px-6 py-3 rounded-full font-medium border border-gray-200 transition-all duration-300 hover:border-primary-500 hover:text-primary-600;
-}
-
-/* Card styles */
-.card-meto {
-  @apply bg-white rounded-2xl p-6 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md;
+/* Meto-style thin border sections */
+.border-section {
+  border-bottom: 1px solid #e5e5e5;
 }
