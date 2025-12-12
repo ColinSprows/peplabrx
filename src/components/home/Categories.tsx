@@ -2,92 +2,65 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Beaker, Pill, FlaskConical, Droplets, Sparkles } from 'lucide-react';
+import { Beaker, FlaskConical, Pill, Droplets, ArrowRight } from 'lucide-react';
 
-const categories = [
+const features = [
   {
-    name: 'Peptides',
-    slug: 'peptides',
-    description: 'Premium research peptides with 99%+ purity',
     icon: Beaker,
-    count: 15,
-    color: 'from-primary-500 to-primary-600',
+    title: 'Find the Right Peptide',
+    description: 'Browse our extensive catalog of premium research peptides, all with 99%+ purity and full COA documentation.',
+    link: '/products?category=peptides',
+    linkText: 'Shop Peptides',
   },
   {
-    name: 'SARMs & Liquids',
-    slug: 'sarms',
-    description: 'Selective androgen receptor modulators',
     icon: FlaskConical,
-    count: 8,
-    color: 'from-accent-500 to-accent-600',
+    title: 'Full-Spectrum Products',
+    description: 'From peptides and SARMs to blends and diluents, everything you need for research in one place.',
+    link: '/products',
+    linkText: 'View All Products',
   },
   {
-    name: 'Blends & Kits',
-    slug: 'blends',
-    description: 'Synergistic research combinations',
     icon: Pill,
-    count: 5,
-    color: 'from-emerald-500 to-emerald-600',
+    title: 'Convenient & Accessible',
+    description: 'Order online with fast shipping. No long waits—quality research compounds delivered to your door.',
+    link: '/how-it-works',
+    linkText: 'Learn More',
   },
   {
-    name: 'Diluents',
-    slug: 'diluents',
-    description: 'Sterile reconstitution solutions',
     icon: Droplets,
-    count: 3,
-    color: 'from-amber-500 to-amber-600',
-  },
-  {
-    name: 'Clean Ingredients',
-    slug: 'clean',
-    description: 'All products verified pure with full ingredient transparency',
-    icon: Sparkles,
-    count: 26,
-    color: 'from-teal-500 to-teal-600',
-    isHighlight: true,
+    title: 'Quality Guaranteed',
+    description: 'Every batch is third-party tested. Access COA reports for complete transparency on purity and quality.',
+    link: '/about',
+    linkText: 'Our Standards',
   },
 ];
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
-
 export default function Categories() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Shop by Category</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Browse our comprehensive selection of research compounds, all lab-tested and manufactured to the highest standards.</p>
-        </div>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Research peptides, the way you always hoped they could be</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Finally, a supplier that connects all the dots.</p>
+        </motion.div>
 
-        <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {categories.map((category) => (
-            <motion.div key={category.slug} variants={item} className="h-full">
-              <Link href={category.slug === 'clean' ? '/products' : `/products?category=${category.slug}`} className="block group h-full">
-                <div className={`h-full bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col ${category.isHighlight ? 'ring-2 ring-teal-400' : ''}`}>
-                  <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${category.color} mb-4 self-start`}>
-                    <category.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{category.name}</h3>
-                  <p className="text-gray-600 mb-4 text-sm flex-grow">{category.description}</p>
-                  <span className="text-primary-600 font-medium text-sm mt-auto">{category.isHighlight ? 'View All Products →' : `${category.count} Products →`}</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {features.map((feature, index) => (
+            <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}>
+              <div className="h-full bg-cream-50 rounded-3xl p-8 border border-gray-100 hover:border-primary-200 transition-all duration-300">
+                <div className="inline-flex p-3 rounded-2xl bg-primary-100 text-primary-600 mb-6">
+                  <feature.icon className="h-6 w-6" />
                 </div>
-              </Link>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
+                <Link href={feature.link} className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700 transition-colors">
+                  {feature.linkText}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
