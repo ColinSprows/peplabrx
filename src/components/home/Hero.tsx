@@ -15,7 +15,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] text-gray-900 mb-6">
               Premium Research
               <br />
-              <span className="font-serif italic">Peptides, For Life</span>
+              <span className="font-serif text-5xl md:text-6xl lg:text-[4rem]">Peptides, For Life</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">Get lab-tested, USA-made peptides with 99%+ purity. Trusted by researchers worldwide for quality and reliability.</p>
 
