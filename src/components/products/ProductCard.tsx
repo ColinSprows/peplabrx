@@ -48,7 +48,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
         <div className="p-4">
           <span className="text-xs text-primary-600 uppercase tracking-wider font-medium">{product.category}</span>
-          <h3 className="text-base font-semibold text-gray-900 mt-1 group-hover:text-primary-600 transition-colors">{product.name}</h3>
+          <h3 className="text-base font-semibold text-gray-900 mt-1 group-hover:text-primary-700 transition-colors">{product.name}</h3>
           <p className="text-sm text-gray-500 mt-1 line-clamp-2">{product.shortDescription}</p>
 
           <div className="flex items-center justify-between mt-4 pt-4 border-t border-black">
@@ -56,7 +56,7 @@ export default function ProductCard({ product }: { product: Product }) {
               <span className="text-lg font-bold text-gray-900">${product.price.toFixed(2)}</span>
               {product.originalPrice && <span className="text-sm text-gray-400 line-through ml-2">${product.originalPrice.toFixed(2)}</span>}
             </div>
-            <button onClick={handleAddToCart} className="p-2 bg-primary-600 hover:bg-primary-700 text-white rounded-full transition-colors">
+            <button onClick={handleAddToCart} className="p-2 bg-primary-300 hover:bg-primary-400 text-gray-900 rounded-full transition-colors">
               <ShoppingCart className="h-4 w-4" />
             </button>
           </div>

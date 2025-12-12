@@ -19,7 +19,7 @@ export default function Hero() {
             </h1>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">Get lab-tested, USA-made peptides with 99%+ purity. Trusted by researchers worldwide for quality and reliability.</p>
 
-            <Link href="/products" className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-sm font-medium transition-colors">
+            <Link href="/products" className="inline-flex items-center justify-center px-6 py-3 bg-primary-300 hover:bg-primary-400 text-gray-900 rounded-full text-sm font-medium transition-colors">
               Shop Peptides
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

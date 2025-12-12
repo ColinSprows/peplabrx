@@ -4,18 +4,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Light purple primary
+        // Light purple primary - #e1b2f9 for backgrounds, #8f67a3 for text
         primary: {
           50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7c3aed',
-          800: '#6b21a8',
-          900: '#581c87',
+          100: '#f5e6fc',
+          200: '#ecd0f9',
+          300: '#e1b2f9',
+          400: '#d199f0',
+          500: '#b87de0',
+          600: '#8f67a3',
+          700: '#7a5690',
+          800: '#64457a',
+          900: '#4e3460',
         },
         // Light khaki/tan secondary
         secondary: {

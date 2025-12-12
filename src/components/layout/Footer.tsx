@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-600 transition-colors">
+                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-700 transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -49,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-600 transition-colors">
+                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-700 transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-600 transition-colors">
+                  <Link href={link.href} className="text-sm text-gray-500 hover:text-primary-700 transition-colors">
                     {link.name}
                   </Link>
                 </li>

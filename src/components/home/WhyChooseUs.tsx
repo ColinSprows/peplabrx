@@ -33,13 +33,13 @@ export default function WhyChooseUs() {
           </motion.div>
 
           {/* The New Way */}
-          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-primary-600 border border-primary-600 rounded-2xl p-8 text-white">
-            <h3 className="text-lg font-semibold mb-6">The PepLabRx Way</h3>
+          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-primary-300 border border-black rounded-2xl p-8">
+            <h3 className="text-lg font-semibold mb-6 text-gray-900">The PepLabRx Way</h3>
             <ul className="space-y-4">
               {newWay.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary-200 mt-0.5 flex-shrink-0" />
-                  <span className="text-primary-100">{item}</span>
+                  <Check className="h-5 w-5 text-primary-700 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-800">{item}</span>
                 </li>
               ))}
             </ul>
@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
 
         {/* CTA */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
-          <Link href="/products" className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-full text-sm font-medium transition-colors">
+          <Link href="/products" className="inline-flex items-center px-6 py-3 bg-primary-300 hover:bg-primary-400 text-gray-900 rounded-full text-sm font-medium transition-colors">
             Start Shopping
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>

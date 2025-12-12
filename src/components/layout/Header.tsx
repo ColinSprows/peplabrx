@@ -42,7 +42,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative" onMouseEnter={() => item.children && setActiveDropdown(item.name)} onMouseLeave={() => setActiveDropdown(null)}>
-                <Link href={item.href} className="text-gray-900 hover:text-primary-600 transition-colors text-sm font-medium flex items-center">
+                <Link href={item.href} className="text-gray-900 hover:text-primary-700 transition-colors text-sm font-medium flex items-center">
                   {item.name}
                   {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
                 </Link>
@@ -62,9 +62,9 @@ export default function Header() {
 
           {/* Right side - just cart */}
           <div className="flex items-center space-x-4">
-            <Link href="/cart" className="relative text-gray-900 hover:text-primary-600 transition-colors">
+            <Link href="/cart" className="relative text-gray-900 hover:text-primary-700 transition-colors">
               <ShoppingCart className="h-5 w-5" />
-              {state.itemCount > 0 && <span className="absolute -top-2 -right-2 bg-primary-600 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center font-medium">{state.itemCount}</span>}
+              {state.itemCount > 0 && <span className="absolute -top-2 -right-2 bg-primary-300 text-gray-900 text-xs rounded-full h-4 w-4 flex items-center justify-center font-medium">{state.itemCount}</span>}
             </Link>
 
             <button className="lg:hidden text-gray-900" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
