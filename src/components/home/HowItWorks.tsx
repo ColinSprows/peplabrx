@@ -28,7 +28,7 @@ export default function HowItWorks() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left side - sticky header */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:sticky lg:top-24">
-            <span className="text-sm text-primary-600 mb-4 block font-medium">How It Works</span>
+            <span className="text-sm text-black font-serif italic mb-4 block">How It Works</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your path to quality research compounds is simple</h2>
             <p className="text-gray-600">Four easy steps to get premium peptides delivered to your lab</p>
           </motion.div>

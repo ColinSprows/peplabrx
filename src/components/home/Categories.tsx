@@ -46,7 +46,7 @@ export default function Categories() {
               <div className="h-full bg-secondary-50 rounded-2xl p-8 border border-black hover:bg-secondary-100 transition-colors">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
-                <Link href={feature.link} className="inline-flex items-center text-primary-600 text-sm font-medium hover:text-primary-700 transition-colors">
+                <Link href={feature.link} className="inline-flex items-center text-black font-serif text-sm font-medium hover:text-gray-600 transition-colors">
                   {feature.linkText}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

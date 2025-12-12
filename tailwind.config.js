@@ -33,6 +33,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-eb-garamond)', 'Georgia', 'serif'],
       },
       borderColor: {
         DEFAULT: '#171717',
