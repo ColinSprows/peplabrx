@@ -28,18 +28,18 @@ export default function Hero() {
           </motion.div>
 
           {/* Hero image - 3 vials arrangement */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="relative flex items-center justify-center h-[400px] md:h-[450px]">
-            {/* Vial 2 - back left */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-[85%] -translate-y-[45%] z-10">
-              <Image src="/vial2.png" alt="Research Peptide Vial" width={280} height={280} className="w-48 md:w-56 h-auto object-contain opacity-90" />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="relative flex items-end justify-center h-[400px] md:h-[450px]">
+            {/* Vial 1 - back left */}
+            <div className="absolute left-1/2 bottom-0 -translate-x-[130%] z-10">
+              <Image src="/vial.png" alt="Research Peptide Vial" width={280} height={280} className="w-44 md:w-52 h-auto object-contain opacity-90" />
+            </div>
+            {/* Vial 2 - front center */}
+            <div className="absolute left-1/2 bottom-0 -translate-x-1/2 z-20">
+              <Image src="/vial2.png" alt="Premium Research Peptides" width={320} height={320} className="w-56 md:w-64 h-auto object-contain" priority />
             </div>
             {/* Vial 3 - back right */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-[15%] -translate-y-[45%] z-10">
-              <Image src="/vial3.png" alt="Research Peptide Vial" width={280} height={280} className="w-48 md:w-56 h-auto object-contain opacity-90" />
-            </div>
-            {/* Vial 1 - front center */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-              <Image src="/vial.png" alt="Premium Research Peptides" width={320} height={320} className="w-56 md:w-64 h-auto object-contain" priority />
+            <div className="absolute left-1/2 bottom-0 translate-x-[30%] z-10">
+              <Image src="/vial3.png" alt="Research Peptide Vial" width={280} height={280} className="w-44 md:w-52 h-auto object-contain opacity-90" />
             </div>
           </motion.div>
         </div>
