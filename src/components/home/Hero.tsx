@@ -30,7 +30,7 @@ export default function Hero() {
           {/* Hero image - 2 vials arrangement */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="relative flex items-end justify-center h-[450px] md:h-[500px]">
             {/* Vial 1 - back left */}
-            <div className="absolute left-1/2 bottom-0 -translate-x-[75%] z-10">
+            <div className="absolute left-1/2 bottom-0 -translate-x-[60%] z-10">
               <Image src="/vial.png" alt="Research Peptide Vial" width={320} height={320} className="w-52 md:w-64 h-auto object-contain opacity-90" />
             </div>
             {/* Vial 2 - front center */}
