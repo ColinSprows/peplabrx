@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const steps = [
   {
@@ -26,11 +27,18 @@ export default function HowItWorks() {
     <section className="py-20 bg-secondary-100 border-b border-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left side - sticky header */}
+          {/* Left side - sticky header with microscope */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:sticky lg:top-24">
-            <span className="text-sm text-black font-serif italic mb-4 block">How It Works</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your path to quality research compounds is simple</h2>
-            <p className="text-gray-600">Four easy steps to get premium peptides delivered to your lab</p>
+            <div className="flex items-start gap-8">
+              <div className="flex-1">
+                <span className="text-sm text-black font-serif italic mb-4 block">How It Works</span>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your path to quality research compounds is simple</h2>
+                <p className="text-gray-600">Four easy steps to get premium peptides delivered to your lab</p>
+              </div>
+              <div className="hidden md:block flex-shrink-0">
+                <Image src="/microscope.png" alt="Microscope" width={200} height={200} className="w-40 lg:w-48 h-auto object-contain" />
+              </div>
+            </div>
           </motion.div>
 
           {/* Right side - steps */}
