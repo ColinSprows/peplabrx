@@ -28,14 +28,14 @@ export default function Hero() {
           </motion.div>
 
           {/* Hero image - 2 vials arrangement */}
-          <div className="relative flex items-center justify-center h-[320px] sm:h-[400px] md:h-[600px]">
+          <div className="relative flex items-center justify-center h-[380px] sm:h-[450px] md:h-[600px]">
             {/* Vial - fades in first */}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.95 }} transition={{ duration: 0.6, delay: 0.4 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[70%] sm:-translate-x-[75%] z-10">
-              <Image src="/vialrender1.png" alt="Research Peptide Vial" width={640} height={640} className="w-[14rem] sm:w-[20rem] md:w-[38rem] h-auto object-contain max-w-none rotate-[10deg]" />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.95 }} transition={{ duration: 0.6, delay: 0.4 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[58%] sm:-translate-x-[65%] md:-translate-x-[75%] z-10">
+              <Image src="/vialrender1.png" alt="Research Peptide Vial" width={640} height={640} className="w-[18rem] sm:w-[24rem] md:w-[38rem] h-auto object-contain max-w-none rotate-[10deg]" />
             </motion.div>
             {/* Shot - fades in after 1 second delay */}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[30%] sm:-translate-x-[35%] z-20">
-              <Image src="/shotrender1.png" alt="Premium Research Peptides" width={1520} height={1520} className="w-[10rem] sm:w-[14rem] md:w-[30rem] h-auto object-contain max-w-none rotate-[-20deg]" priority />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[42%] sm:-translate-x-[40%] md:-translate-x-[35%] z-20">
+              <Image src="/shotrender1.png" alt="Premium Research Peptides" width={1520} height={1520} className="w-[12rem] sm:w-[16rem] md:w-[30rem] h-auto object-contain max-w-none rotate-[-20deg]" priority />
             </motion.div>
           </div>
         </div>
