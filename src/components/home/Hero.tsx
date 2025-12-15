@@ -27,19 +27,15 @@ export default function Hero() {
             <p className="text-sm text-gray-500 mt-6">Free shipping on orders over $150</p>
           </motion.div>
 
-          {/* Hero image - 3 vials arrangement */}
+          {/* Hero image - 2 vials arrangement */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="relative flex items-end justify-center h-[450px] md:h-[500px]">
             {/* Vial 1 - back left */}
-            <div className="absolute left-1/2 bottom-0 -translate-x-[95%] z-10">
+            <div className="absolute left-1/2 bottom-0 -translate-x-[75%] z-10">
               <Image src="/vial.png" alt="Research Peptide Vial" width={320} height={320} className="w-52 md:w-64 h-auto object-contain opacity-90" />
             </div>
             {/* Vial 2 - front center */}
-            <div className="absolute left-1/2 bottom-0 -translate-x-1/2 z-20">
+            <div className="absolute left-1/2 bottom-0 -translate-x-[35%] z-20">
               <Image src="/vial2.png" alt="Premium Research Peptides" width={380} height={380} className="w-64 md:w-80 h-auto object-contain" priority />
-            </div>
-            {/* Vial 3 - back right */}
-            <div className="absolute left-1/2 bottom-0 -translate-x-[5%] z-10">
-              <Image src="/vial3.png" alt="Research Peptide Vial" width={320} height={320} className="w-52 md:w-64 h-auto object-contain opacity-90" />
             </div>
           </motion.div>
         </div>
