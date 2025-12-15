@@ -30,12 +30,12 @@ export default function Hero() {
           {/* Hero image - 2 vials arrangement */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="relative flex items-center justify-center h-[450px] md:h-[600px] overflow-visible">
             {/* Vial 1 - back left */}
-            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[75%] z-10">
-              <Image src="/vial4.png" alt="Research Peptide Vial" width={640} height={640} className="w-[26rem] md:w-[32rem] h-auto object-contain opacity-90" />
+            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[75%] z-20">
+              <Image src="/vialrender1.png" alt="Research Peptide Vial" width={640} height={640} className="w-[32rem] md:w-[38rem] h-auto object-contain max-w-none rotate-[10deg]" />
             </div>
             {/* Vial 2 - front center */}
-            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[35%] z-20">
-              <Image src="/vial2.png" alt="Premium Research Peptides" width={1520} height={1520} className="w-[40rem] md:w-[50rem] h-auto object-contain max-w-none" priority />
+            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[35%] z-10">
+              <Image src="/vialrender2.png" alt="Premium Research Peptides" width={1520} height={1520} className="w-[30rem] md:w-[38rem] h-auto opacity-95 object-contain max-w-none" priority />
             </div>
           </motion.div>
         </div>
