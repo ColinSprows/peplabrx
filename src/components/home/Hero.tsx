@@ -8,8 +8,8 @@ import { ArrowRight } from 'lucide-react';
 export default function Hero() {
   return (
     <section className="bg-white border-b border-black overflow-x-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-28">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 lg:gap-20 items-center">
           {/* Content */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] text-gray-900 mb-6">
@@ -28,13 +28,13 @@ export default function Hero() {
           </motion.div>
 
           {/* Hero image - 2 vials arrangement */}
-          <div className="relative flex items-center justify-center h-[380px] sm:h-[450px] md:h-[600px]">
+          <div className="relative flex items-center justify-center h-[280px] sm:h-[400px] md:h-[600px]">
             {/* Vial - fades in first */}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.95 }} transition={{ duration: 0.6, delay: 0.4 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[58%] sm:-translate-x-[65%] md:-translate-x-[75%] z-10">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.95 }} transition={{ duration: 0.6, delay: 0.4 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[60%] sm:-translate-x-[65%] md:-translate-x-[75%] z-10">
               <Image src="/vialrender1.png" alt="Research Peptide Vial" width={640} height={640} className="w-[18rem] sm:w-[24rem] md:w-[38rem] h-auto object-contain max-w-none rotate-[10deg]" />
             </motion.div>
             {/* Shot - fades in after 1 second delay */}
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[42%] sm:-translate-x-[40%] md:-translate-x-[35%] z-20">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[20%] sm:-translate-x-[40%] md:-translate-x-[35%] z-20">
               <Image src="/shotrender1.png" alt="Premium Research Peptides" width={1520} height={1520} className="w-[12rem] sm:w-[16rem] md:w-[30rem] h-auto object-contain max-w-none rotate-[-20deg]" priority />
             </motion.div>
           </div>
