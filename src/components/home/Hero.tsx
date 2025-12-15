@@ -28,16 +28,16 @@ export default function Hero() {
           </motion.div>
 
           {/* Hero image - 2 vials arrangement */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="relative flex items-center justify-center h-[450px] md:h-[600px] overflow-visible">
-            {/* Vial 1 - back left */}
-            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[75%] z-20">
+          <div className="relative flex items-center justify-center h-[450px] md:h-[600px] overflow-visible">
+            {/* Vial - fades in first */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.95 }} transition={{ duration: 0.6, delay: 0.2 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[75%] z-10">
               <Image src="/vialrender1.png" alt="Research Peptide Vial" width={640} height={640} className="w-[32rem] md:w-[38rem] h-auto object-contain max-w-none rotate-[10deg]" />
-            </div>
-            {/* Vial 2 - front center */}
-            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[35%] z-10">
-              <Image src="/vialrender2.png" alt="Premium Research Peptides" width={1520} height={1520} className="w-[30rem] md:w-[38rem] h-auto opacity-95 object-contain max-w-none" priority />
-            </div>
-          </motion.div>
+            </motion.div>
+            {/* Shot - fades in after 1 second delay */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.2 }} className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[35%] z-20">
+              <Image src="/shotrender1.png" alt="Premium Research Peptides" width={1520} height={1520} className="w-[20rem] md:w-[30rem] h-auto object-contain max-w-none rotate-[-20deg]" priority />
+            </motion.div>
+          </div>
         </div>
       </div>
 
