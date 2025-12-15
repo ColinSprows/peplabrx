@@ -66,10 +66,10 @@ function ProductsContent() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary-600 to-accent-600 text-white py-12">
+      <div className="bg-secondary-100 py-12 border-b border-black">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">{category ? categories.find((c) => c.value === category)?.label : 'All Products'}</h1>
-          <p className="text-primary-100 max-w-2xl">Browse our complete selection of premium research peptides, SARMs, and supplies. All products are lab-tested with 99%+ purity.</p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black">{category ? categories.find((c) => c.value === category)?.label : 'All Products'}</h1>
+          <p className="text-gray-700 max-w-2xl">Browse our complete selection of premium research peptides, SARMs, and supplies. All products are lab-tested with 99%+ purity.</p>
         </div>
       </div>
 
