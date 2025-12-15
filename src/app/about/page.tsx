@@ -17,7 +17,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 bg-primary-300 border-b border-black">
+      <section className="py-20 bg-white border-b border-black">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -27,19 +27,19 @@ export default function AboutPage() {
               <p className="text-gray-600 leading-relaxed">Based in the United States, we manufacture all our products in FDA-registered facilities, adhering to strict quality control protocols at every step of the production process.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-2xl p-6 text-center border border-black">
+              <div className="bg-secondary-100 rounded-2xl p-6 text-center border border-black">
                 <div className="text-4xl font-bold text-black mb-2">16,200+</div>
                 <div className="text-gray-700">Happy Customers</div>
               </div>
-              <div className="bg-white rounded-2xl p-6 text-center border border-black">
+              <div className="bg-secondary-100 rounded-2xl p-6 text-center border border-black">
                 <div className="text-4xl font-bold text-black mb-2">99%+</div>
                 <div className="text-gray-700">Purity Guaranteed</div>
               </div>
-              <div className="bg-white rounded-2xl p-6 text-center border border-black">
+              <div className="bg-secondary-100 rounded-2xl p-6 text-center border border-black">
                 <div className="text-4xl font-bold text-black mb-2">50+</div>
                 <div className="text-gray-700">Products</div>
               </div>
-              <div className="bg-white rounded-2xl p-6 text-center border border-black">
+              <div className="bg-secondary-100 rounded-2xl p-6 text-center border border-black">
                 <div className="text-4xl font-bold text-black mb-2">5+</div>
                 <div className="text-gray-700">Years Experience</div>
               </div>
@@ -49,7 +49,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-white border-b border-black">
+      <section className="py-20 bg-primary-300 border-b border-black">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
@@ -65,8 +65,8 @@ export default function AboutPage() {
               { icon: Heart, title: 'Integrity', description: 'We operate with honesty and integrity in all our business practices.' },
               { icon: Beaker, title: 'Scientific Excellence', description: 'We support the advancement of science through premium research materials.' },
             ].map((value, index) => (
-              <motion.div key={value.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="bg-secondary-50 rounded-2xl p-6 border border-black">
-                <div className="inline-flex p-3 rounded-xl bg-white border border-black text-black mb-4">
+              <motion.div key={value.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="bg-white rounded-2xl p-6 border border-black">
+                <div className="inline-flex p-3 rounded-xl bg-secondary-100 border border-black text-black mb-4">
                   <value.icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{value.title}</h3>

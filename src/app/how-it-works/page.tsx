@@ -51,13 +51,13 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Steps */}
-      <section className="py-20 bg-primary-300 border-b border-black">
+      <section className="py-20 bg-white border-b border-black">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             {steps.map((step, index) => (
               <motion.div key={step.title} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-white border border-black flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-secondary-100 border border-black flex items-center justify-center">
                     <step.icon className="h-8 w-8 text-black" />
                   </div>
                 </div>
@@ -72,7 +72,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Introduction to Peptides */}
-      <section className="py-20 bg-white border-b border-black">
+      <section className="py-20 bg-primary-300 border-b border-black">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Introduction to Peptides</h2>
