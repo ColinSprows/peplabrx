@@ -31,11 +31,11 @@ export default function Hero() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="relative flex items-center justify-center h-[450px] md:h-[500px]">
             {/* Vial 1 - back left */}
             <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[75%] z-10">
-              <Image src="/vial.png" alt="Research Peptide Vial" width={640} height={640} className="w-[26rem] md:w-[32rem] h-auto object-contain opacity-90" />
+              <Image src="/vial4.png" alt="Research Peptide Vial" width={640} height={640} className="w-[26rem] md:w-[32rem] h-auto object-contain opacity-90" />
             </div>
             {/* Vial 2 - front center */}
             <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[35%] z-20">
-              <Image src="/vial2.png" alt="Premium Research Peptides" width={760} height={760} className="w-[32rem] md:w-[40rem] h-auto object-contain" priority />
+              <Image src="/vial2.png" alt="Premium Research Peptides" width={1520} height={1520} className="w-[64rem] md:w-[80rem] h-auto object-contain" priority />
             </div>
           </motion.div>
         </div>
